@@ -212,26 +212,42 @@ const qsa = (sel, root = document) => [...root.querySelectorAll(sel)];
 })();
 
 /* ════════════════════════════════════════════════════════
-   7. CONTACT FORM (demo submit handler)
+   7. CONTACT FORM — Formspree real submission
    ════════════════════════════════════════════════════════ */
 (function initForm () {
   const form    = qs('#contact-form');
   const success = qs('#form-success');
+  const error   = qs('#form-error');
   const submit  = qs('#form-submit');
+  if (!form) return;
 
-  form?.addEventListener('submit', e => {
+  form.addEventListener('submit', async e => {
     e.preventDefault();
     submit.textContent = 'Sending…';
     submit.disabled    = true;
+    success.classList.add('hidden');
+    error.classList.add('hidden');
 
-    /* Simulate async send — wire up a real backend / EmailJS / Formspree here */
-    setTimeout(() => {
-      form.reset();
+    try {
+      const res = await fetch(form.action, {
+        method:  'POST',
+        body:    new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (res.ok) {
+        form.reset();
+        success.classList.remove('hidden');
+        setTimeout(() => success.classList.add('hidden'), 6000);
+      } else {
+        error.classList.remove('hidden');
+      }
+    } catch {
+      error.classList.remove('hidden');
+    } finally {
       submit.textContent = 'Send Message →';
       submit.disabled    = false;
-      success.classList.remove('hidden');
-      setTimeout(() => success.classList.add('hidden'), 5000);
-    }, 1200);
+    }
   });
 })();
 
