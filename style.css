@@ -1026,6 +1026,28 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   color: var(--text-sub);
 }
 
+.cert-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 14px;
+  padding: 7px 16px;
+  border-radius: 99px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--accent);
+  border: 1.5px solid rgba(6,182,212,0.35);
+  background: rgba(6,182,212,0.06);
+  transition: var(--transition);
+}
+
+.cert-link:hover {
+  background: rgba(6,182,212,0.14);
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(6,182,212,0.2);
+}
+
 /* ═══════════════════════════════════════════════════════
    TESTIMONIALS
    ═══════════════════════════════════════════════════════ */
