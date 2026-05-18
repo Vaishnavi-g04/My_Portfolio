@@ -1912,21 +1912,11 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .navbar { padding: 16px 32px; gap: 24px; }
   .nav-links { gap: 20px; }
 
-  /* hero */
+  /* hero — keep side-by-side at this size, just tighten spacing */
   .hero {
     padding: 110px 40px 80px;
     gap: 40px;
-    flex-direction: column-reverse;
-    text-align: center;
-    min-height: unset;
-    padding-bottom: 64px;
   }
-  .hero-content  { max-width: 100%; }
-  .hero-badge    { margin: 0 auto 24px; }
-  .hero-tagline  { margin: 0 auto 36px; }
-  .hero-cta      { justify-content: center; }
-  .hero-stats    { justify-content: center; }
-  .hero-avatar-wrap { margin: 0 auto; }
   .avatar-img    { width: 240px; height: 240px; }
   .scroll-indicator { display: none; }
 
@@ -1997,15 +1987,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   }
   .nav-links a:last-child { border-bottom: none; }
 
-  /* hero */
-  .hero { padding: 90px 20px 60px; gap: 32px; }
-  .hero-name { font-size: clamp(2rem, 7vw, 3rem); }
-  .hero-badge { font-size: 0.78rem; }
-  .hero-cta   { flex-direction: column; align-items: center; }
-  .btn { width: 100%; max-width: 280px; justify-content: center; }
-  .hero-stats { gap: 20px; flex-wrap: wrap; }
-  .stat-num   { font-size: 1.5rem; }
-  .avatar-img { width: 200px; height: 200px; }
+  /* hero — no changes here, handled at 640px */
 
   /* sections */
   .section { padding: 72px 0; }
@@ -2062,6 +2044,27 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
     text-align: center;
     gap: 12px;
   }
+}
+
+/* ── 640px — stack hero here ────────────────────────── */
+@media (max-width: 640px) {
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+    min-height: unset;
+    padding: 90px 20px 60px;
+    gap: 32px;
+  }
+  .hero-content  { max-width: 100%; }
+  .hero-badge    { margin: 0 auto 24px; }
+  .hero-tagline  { margin: 0 auto 36px; }
+  .hero-cta      { justify-content: center; flex-direction: column; align-items: center; }
+  .hero-stats    { justify-content: center; gap: 20px; flex-wrap: wrap; }
+  .hero-avatar-wrap { margin: 0 auto; }
+  .hero-badge { font-size: 0.78rem; }
+  .btn { width: 100%; max-width: 280px; justify-content: center; }
+  .stat-num { font-size: 1.5rem; }
+  .avatar-img { width: 180px; height: 180px; }
 }
 
 /* ── 480px — large phones ────────────────────────────── */
