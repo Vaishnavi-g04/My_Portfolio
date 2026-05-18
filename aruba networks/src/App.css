@@ -1,0 +1,25 @@
+/* App.css — page-level layout */
+
+.page-wrapper {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100dvh;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .page-wrapper {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .page-wrapper {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+}

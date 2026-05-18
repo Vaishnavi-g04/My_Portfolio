@@ -1,0 +1,37 @@
+/* NeuralCanvas.css */
+.neural-canvas {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.45;
+}
+
+.orb {
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  filter: blur(80px);
+  animation: orbFloat 12s ease-in-out infinite alternate;
+}
+.orb-1 {
+  width: 520px; height: 520px;
+  background: radial-gradient(circle, rgba(255,107,0,0.22) 0%, transparent 70%);
+  top: -140px; right: -120px;
+  animation-duration: 14s;
+}
+.orb-2 {
+  width: 380px; height: 380px;
+  background: radial-gradient(circle, rgba(30,80,200,0.2) 0%, transparent 70%);
+  bottom: -80px; left: -80px;
+  animation-duration: 18s;
+  animation-delay: -6s;
+}
+.orb-3 {
+  width: 280px; height: 280px;
+  background: radial-gradient(circle, rgba(120,0,255,0.15) 0%, transparent 70%);
+  top: 45%; left: 35%;
+  animation-duration: 22s;
+  animation-delay: -10s;
+}

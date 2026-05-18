@@ -1,0 +1,47 @@
+/* Toast notification — fixed overlay */
+.toast-fixed {
+  position: fixed;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: rgba(20, 30, 50, 0.95);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 12px;
+  padding: 12px 24px;
+  font-size: 0.9rem;
+  color: #f0f4ff;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.4);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s, transform 0.3s;
+  z-index: 999;
+  white-space: nowrap;
+  font-family: 'Inter', sans-serif;
+}
+
+.toast-fixed.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+  pointer-events: auto;
+  animation: toastIn 0.3s ease both;
+}
+
+.toast-fixed.success { border-color: rgba(54,211,153,0.4); }
+.toast-fixed.error   { border-color: rgba(255,92,92,0.4); }
+.toast-fixed.info    { border-color: rgba(255,107,0,0.3); }
+
+@media (max-width: 640px) {
+  .toast-fixed {
+    bottom: 16px;
+    left: 16px;
+    right: 16px;
+    transform: translateY(20px);
+    text-align: center;
+    white-space: normal;
+  }
+  .toast-fixed.show {
+    transform: translateY(0);
+    animation: none;
+  }
+}

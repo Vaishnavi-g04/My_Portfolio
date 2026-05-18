@@ -1,0 +1,124 @@
+/* =====================================================
+   ARUBA NETWORKS — AUTH UI
+   Global design tokens & base styles
+   ===================================================== */
+
+/* ── 1. Design Tokens ──────────────────────────────── */
+:root {
+  --aruba-orange: #ff6b00;
+  --aruba-orange-lt: #ff8c33;
+  --aruba-orange-glow: rgba(255, 107, 0, 0.35);
+
+  --bg-base: #080c14;
+  --bg-surface: rgba(12, 18, 30, 0.82);
+  --bg-card: rgba(16, 24, 40, 0.72);
+  --bg-input: rgba(255, 255, 255, 0.045);
+  --bg-input-focus: rgba(255, 107, 0, 0.07);
+
+  --border-subtle: rgba(255, 255, 255, 0.07);
+  --border-focus: rgba(255, 107, 0, 0.6);
+
+  --text-primary: #f0f4ff;
+  --text-secondary: rgba(176, 196, 230, 0.75);
+  --text-muted: rgba(130, 155, 195, 0.6);
+  --text-error: #ff5c5c;
+  --text-success: #36d399;
+
+  --grad-primary: linear-gradient(135deg, #ff6b00 0%, #ff4d00 100%);
+  --grad-glow: radial-gradient(ellipse at 60% 40%, rgba(255, 107, 0, 0.18) 0%, transparent 65%);
+
+  --r-sm: 8px;
+  --r-md: 12px;
+  --r-lg: 18px;
+  --r-xl: 28px;
+  --r-full: 9999px;
+
+  --shadow-card: 0 32px 72px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(255, 255, 255, 0.05);
+  --shadow-btn: 0 6px 28px rgba(255, 107, 0, 0.45);
+  --shadow-input-focus: 0 0 0 3px rgba(255, 107, 0, 0.2);
+
+  --t-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --t-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --t-slow: 400ms cubic-bezier(0.4, 0, 0.2, 1);
+  --t-spring: 350ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* ── 2. Reset ──────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: var(--bg-base);
+  color: var(--text-primary);
+  min-height: 100dvh;
+  overflow-x: hidden;
+}
+
+/* ── 3. Animations ─────────────────────────────────── */
+@keyframes orbFloat {
+  from { transform: translate(0, 0) scale(1); }
+  to   { transform: translate(30px, -40px) scale(1.08); }
+}
+
+@keyframes logoPulse {
+  0%,100% { filter: drop-shadow(0 0 16px rgba(255,107,0,0.6)); }
+  50%     { filter: drop-shadow(0 0 28px rgba(255,107,0,0.9)); }
+}
+
+@keyframes gradientShift {
+  from { background-position: 0%; }
+  to   { background-position: 100%; }
+}
+
+@keyframes fadeSlideUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: none; }
+}
+
+@keyframes fadeSlideIn {
+  from { opacity: 0; transform: translateX(-12px); }
+  to   { opacity: 1; transform: none; }
+}
+
+@keyframes aiPulse {
+  0%,100% { transform: scale(1); opacity: 1; }
+  50%     { transform: scale(1.5); opacity: 0.6; }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes shakeIn {
+  0%   { transform: translateX(-4px); }
+  33%  { transform: translateX(4px); }
+  66%  { transform: translateX(-2px); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes formIn {
+  from { opacity: 0; transform: translateY(20px) scale(0.97); }
+  to   { opacity: 1; transform: none; }
+}
+
+@keyframes toastIn {
+  from { opacity: 0; transform: translateX(-50%) translateY(20px); }
+  to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+/* ── 4. Reduced motion ─────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Vaishnavi G — Frontend Developer & Engineering Student | Portfolio" />
+  <title>Vaishnavi G | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ─── NAVIGATION ─────────────────────────────────────── -->
+  <nav class="navbar" id="navbar">
+    <a href="#home" class="nav-logo">VG</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="btn btn-outline">Hire Me</a>
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ─── HERO ───────────────────────────────────────────── -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+      <div class="grid-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="dot"></span>
+        Available for Internships
+      </div>
+      <h1 class="hero-name">
+        Hi, I'm <span class="gradient-text">Vaishnavi G</span>
+      </h1>
+      <div class="hero-role">
+        <span class="role-prefix">I build </span>
+        <span class="typed-text" id="typed"></span>
+      </div>
+      <p class="hero-tagline">
+        Motivated engineering student with foundational knowledge in frontend &amp; full-stack development — turning
+        ideas into clean, responsive web experiences while growing in an Agile environment.
+      </p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">View My Work</a>
+        <a href="#contact" class="btn btn-ghost">Get In Touch</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num">4+</span>
+          <span class="stat-label">Projects Done</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">3</span>
+          <span class="stat-label">Internships</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">3yr</span>
+          <span class="stat-label">Engineering</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-avatar-wrap">
+      <div class="avatar-ring"></div>
+      <div class="avatar-ring ring-2"></div>
+      <div class="avatar-img">
+        <img src="photo.png" alt="Vaishnavi G"
+          onerror="this.style.display='none'; this.parentElement.querySelector('.avatar-placeholder').style.display='flex';" />
+        <div class="avatar-placeholder">
+          <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="12" cy="8" r="4" />
+            <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
+          </svg>
+          <span>Vaishnavi G</span>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ─── ABOUT ──────────────────────────────────────────── -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">01 / About</span>
+        <h2>Who I Am</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I'm a B.E. Electronics &amp; Communication student at Adichunchanagiri Institute of Technology,
+            Chikkamagaluru. I specialize in frontend development — building clean, responsive UIs with HTML, CSS, and
+            JavaScript — and I'm actively expanding into full-stack development with Python, Django, and REST APIs.
+          </p>
+          <p>
+            When I'm not coding, you'll find me designing simple web layouts, exploring new technologies, or
+            representing my college at VTU cultural fests and dance competitions. I'm always eager to learn and
+            challenge myself.
+          </p>
+          <div class="about-highlights">
+            <div class="highlight-item">
+              <span class="highlight-icon">🎓</span>
+              <div>
+                <strong>B.E. — Electronics &amp; Communication</strong>
+                <span>Adichunchanagiri Institute of Technology — 2022–2026</span>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-icon">📍</span>
+              <div>
+                <strong>Chikkamagaluru, Karnataka</strong>
+                <span>Based here, open to remote &amp; Bengaluru</span>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-icon">💼</span>
+              <div>
+                <strong>Python Full Stack Intern</strong>
+                <span>Dhee Coding Lab, Bengaluru — Feb 2026 – Present</span>
+              </div>
+            </div>
+          </div>
+          <a href="vaishnavi_resume.pdf" class="btn btn-primary" download="Vaishnavi_Resume.pdf">Download Résumé ↓</a>
+        </div>
+        <div class="about-visual">
+          <div class="about-card">
+            <div class="card-glow"></div>
+            <div class="about-img-wrap">
+              <img src="photo.png" alt="Vaishnavi G"
+                onerror="this.style.display='none'; this.parentElement.querySelector('.about-img-placeholder').style.display='flex';" />
+              <div class="about-img-placeholder">
+                <span>📸 Your Photo Here</span>
+              </div>
+            </div>
+            <div class="about-card-info">
+              <p class="card-name">Vaishnavi G</p>
+              <p class="card-role">Frontend Developer · ECE Student</p>
+              <div class="card-socials">
+                <a href="https://github.com/Vaishnavi-g04" id="github-link" target="_blank" rel="noopener"
+                  aria-label="GitHub">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.92.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                  </svg>
+                </a>
+                <a href="https://www.linkedin.com/in/vaishnavi-g-776981355/" id="linkedin-link" target="_blank"
+                  rel="noopener" aria-label="LinkedIn">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SKILLS ─────────────────────────────────────────── -->
+  <section class="section section-alt" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">02 / Skills</span>
+        <h2>What I Work With</h2>
+      </div>
+      <div class="skills-tabs">
+        <button class="tab-btn active" data-tab="tech">Tech Stack</button>
+        <button class="tab-btn" data-tab="tools">Tools</button>
+        <button class="tab-btn" data-tab="soft">Soft Skills</button>
+      </div>
+
+      <div class="tab-content active" id="tab-tech">
+        <div class="skills-grid">
+          <div class="skill-card">
+            <div class="skill-icon">🌐</div>
+            <span class="skill-name">HTML &amp; CSS</span>
+            <div class="skill-bar">
+              <div class="skill-fill" style="--pct: 85%"></div>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">🟨</div>
+            <span class="skill-name">JavaScript</span>
+            <div class="skill-bar">
+              <div class="skill-fill" style="--pct: 75%"></div>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">🐍</div>
+            <span class="skill-name">Python</span>
+            <div class="skill-bar">
+              <div class="skill-fill" style="--pct: 80%"></div>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">🅰️</div>
+            <span class="skill-name">Basic Angular</span>
+            <div class="skill-bar">
+              <div class="skill-fill" style="--pct: 60%"></div>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">🗄️</div>
+            <span class="skill-name">MySQL</span>
+            <div class="skill-bar">
+              <div class="skill-fill" style="--pct: 70%"></div>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">⚙️</div>
+            <span class="skill-name">Django / Flask</span>
+            <div class="skill-bar">
+              <div class="skill-fill" style="--pct: 55%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-content" id="tab-tools">
+        <div class="tools-list">
+          <span class="tool-pill">VS Code</span>
+          <span class="tool-pill">Git</span>
+          <span class="tool-pill">GitHub</span>
+          <span class="tool-pill">JIRA (Basics)</span>
+          <span class="tool-pill">MySQL</span>
+          <span class="tool-pill">Postman</span>
+          <span class="tool-pill">ModelSim</span>
+          <span class="tool-pill">Quartus Prime</span>
+          <span class="tool-pill">MS Excel</span>
+          <span class="tool-pill">MS PowerPoint</span>
+        </div>
+      </div>
+
+      <div class="tab-content" id="tab-soft">
+        <div class="soft-skills">
+          <div class="soft-item"><span>🧩</span> Problem Solving</div>
+          <div class="soft-item"><span>🗣️</span> Communication</div>
+          <div class="soft-item"><span>🤝</span> Team Collaboration</div>
+          <div class="soft-item"><span>⚡</span> Quick Learner</div>
+          <div class="soft-item"><span>🐛</span> Debugging &amp; Testing</div>
+          <div class="soft-item"><span>🎯</span> Attention to Detail</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── PROJECTS ───────────────────────────────────────── -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">03 / Projects</span>
+        <h2>Things I've Built</h2>
+      </div>
+
+      <div class="projects-filter">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="web">Web</button>
+        <button class="filter-btn" data-filter="ece">ECE</button>
+        <button class="filter-btn" data-filter="ai">AI / ML</button>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- ── Project 1 (featured — Web) ── -->
+        <div class="project-card featured" data-category="web" data-url="https://github.com/Vaishnavi-g04" role="link"
+          tabindex="0" aria-label="View Frontend Login and Signup Page on GitHub">
+          <div class="project-img">
+            <div class="project-img-placeholder"
+              style="background: linear-gradient(135deg,#1a2236,#111827); font-size:3rem;">🔐</div>
+            <div class="project-overlay">
+              <a href="https://github.com/Vaishnavi-g04" id="proj1-demo" target="_blank" rel="noopener" class="overlay-btn">View on GitHub ↗</a>
+              <a href="https://github.com/Vaishnavi-g04" id="proj1-code" target="_blank" rel="noopener"
+                class="overlay-btn overlay-btn-ghost">View Code ↗</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-badge">Featured</span>
+            <h3><a href="https://github.com/Vaishnavi-g04" target="_blank" rel="noopener">Frontend Login &amp; Signup Page</a>
+            </h3>
+            <p>A polished authentication UI built with vanilla HTML, CSS, and JavaScript. Features client-side form
+              validation, smooth input interactions, Local Storage–based login simulation, and clean DOM manipulation —
+              all with a responsive, modern layout.</p>
+            <div class="project-tags">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span><span>DOM</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── Project 2 — AI / ML ── -->
+        <div class="project-card" data-category="ai" data-url="https://github.com/Vaishnavi-g04" role="link" tabindex="0"
+          aria-label="View MedVision AI on GitHub">
+          <div class="project-img">
+            <div class="project-img-placeholder"
+              style="background: linear-gradient(135deg,#0b1024,#1a2236); font-size:3rem;">🏥</div>
+            <div class="project-overlay">
+              <a href="https://github.com/Vaishnavi-g04" id="proj2-demo" target="_blank" rel="noopener" class="overlay-btn">View on GitHub ↗</a>
+              <a href="https://github.com/Vaishnavi-g04" id="proj2-code" target="_blank" rel="noopener"
+                class="overlay-btn overlay-btn-ghost">View Code ↗</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3><a href="https://github.com/Vaishnavi-g04" target="_blank" rel="noopener">MedVision AI</a></h3>
+            <p>Explored and contributed to a full-stack medical assistant platform. Studied how React UI components
+              interact with a FastAPI backend, worked on frontend features including image upload, report display, and
+              chatbot interface integration via REST APIs.</p>
+            <div class="project-tags">
+              <span>React</span><span>FastAPI</span><span>REST API</span><span>Python</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── Project 3 — ECE ── -->
+        <div class="project-card" data-category="ece" data-url="fpga-hardware-trojan-detection-report.pdf"
+          role="link" tabindex="0" aria-label="Open FPGA Hardware Trojan Detection report">
+          <div class="project-img">
+            <div class="project-img-placeholder"
+              style="background: linear-gradient(135deg,#0f172a,#1e1b4b); font-size:3rem;">🔬</div>
+            <div class="project-overlay">
+              <a href="fpga-hardware-trojan-detection-report.pdf" id="proj3-demo" target="_blank" rel="noopener"
+                class="overlay-btn">View Report ↗</a>
+              <a href="fpga-hardware-trojan-detection-report.pdf" id="proj3-code" download
+                class="overlay-btn overlay-btn-ghost">Download Report ↓</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3><a href="fpga-hardware-trojan-detection-report.pdf" target="_blank" rel="noopener">FPGA Hardware Trojan
+                Detection</a></h3>
+            <p>Designed a real-time power profiling system on FPGA to detect hardware trojans by identifying abnormal
+              power behaviour during circuit operation. Simulated and verified using Quartus Prime and ModelSim. Full
+              report includes architecture, implementation flow, VHDL modules, and results.</p>
+            <div class="project-tags">
+              <span>FPGA</span><span>VHDL</span><span>Quartus Prime</span><span>ModelSim</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── Project 4 — Web ── -->
+        <div class="project-card" data-category="web">
+          <div class="project-img">
+            <div class="project-img-placeholder"
+              style="background: linear-gradient(135deg,#0c1a2e,#162032); font-size:3rem;">🌐</div>
+            <div class="project-overlay">
+              <a href="https://github.com/Vaishnavi-g04" id="proj4-demo" target="_blank" rel="noopener"
+                class="overlay-btn">View on GitHub ↗</a>
+              <a href="https://github.com/Vaishnavi-g04" id="proj4-code" target="_blank" rel="noopener"
+                class="overlay-btn overlay-btn-ghost">View Code ↗</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Full Stack Web Applications</h3>
+            <p>Practised end-to-end web development using Python, HTML, CSS, and JavaScript. Built CRUD-based apps,
+              worked on frontend–backend interaction via REST APIs, debugged UI issues, and validated data flow using
+              Postman and MySQL.</p>
+            <div class="project-tags">
+              <span>Python</span><span>HTML &amp; CSS</span><span>JavaScript</span><span>MySQL</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="projects-more">
+        <a href="https://github.com/Vaishnavi-g04" id="more-projects-link" target="_blank" rel="noopener"
+          class="btn btn-outline">See All Projects on GitHub ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── EXPERIENCE ─────────────────────────────────────── -->
+  <section class="section section-alt" id="experience">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">04 / Experience</span>
+        <h2>My Journey</h2>
+      </div>
+      <div class="timeline">
+
+        <!-- ── Internship 1 ── -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3>Python Full Stack Intern</h3>
+                <span class="timeline-company">Dhee Coding Lab, Bengaluru</span>
+              </div>
+              <div class="timeline-meta">
+                <span class="timeline-date">Feb 2026 – Present</span>
+                <span class="timeline-loc">📍 Bengaluru</span>
+              </div>
+            </div>
+            <ul class="timeline-points">
+              <li>Learning and building web applications using Python, HTML, CSS, and JavaScript</li>
+              <li>Tested web applications for functionality and usability; debugged frontend &amp; backend issues</li>
+              <li>Performed manual testing on CRUD operations and validated API responses using Postman</li>
+              <li>Worked with MySQL database to verify data accuracy and integrity</li>
+            </ul>
+            <div class="timeline-tags">
+              <span>Python</span><span>HTML &amp;
+                CSS</span><span>JavaScript</span><span>MySQL</span><span>Postman</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── Internship 2 ── -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3>RTL Design Intern</h3>
+                <span class="timeline-company">Maven Silicon, Bengaluru</span>
+              </div>
+              <div class="timeline-meta">
+                <span class="timeline-date">April 2025 – May 2025</span>
+                <span class="timeline-loc">📍 Bengaluru</span>
+              </div>
+            </div>
+            <ul class="timeline-points">
+              <li>Verified functionality of RTL designs using simulation tools</li>
+              <li>Performed testing and debugging of AHB to APB bridge design</li>
+              <li>Identified and resolved logical errors in FSM implementation</li>
+              <li>Used ModelSim for validation and testing of outputs</li>
+            </ul>
+            <div class="timeline-tags">
+              <span>ModelSim</span><span>VHDL</span><span>RTL Design</span><span>VLSI</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── Internship 3 ── -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3>Embedded Systems Intern</h3>
+                <span class="timeline-company">Loginware Software Pvt. Ltd, Bengaluru</span>
+              </div>
+              <div class="timeline-meta">
+                <span class="timeline-date">Nov 2024 (1 week)</span>
+                <span class="timeline-loc">📍 Bengaluru</span>
+              </div>
+            </div>
+            <ul class="timeline-points">
+              <li>Verified input/output operations and peripheral behavior</li>
+              <li>Analyzed system performance and identified errors</li>
+              <li>Built microcontroller-based applications with peripheral interfacing</li>
+            </ul>
+            <div class="timeline-tags">
+              <span>Embedded C</span><span>Microcontrollers</span><span>Peripheral Interfacing</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── Education ── -->
+        <div class="timeline-item">
+          <div class="timeline-dot timeline-dot-edu"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3>Bachelor of Engineering — Electronics &amp; Communication</h3>
+                <span class="timeline-company">Adichunchanagiri Institute of Technology</span>
+              </div>
+              <div class="timeline-meta">
+                <span class="timeline-date">2022 – 2026</span>
+                <span class="timeline-loc">🎓 Chikkamagaluru, Karnataka</span>
+              </div>
+            </div>
+            <p style="color:var(--text-muted); font-size:0.9rem">IEEE Student Congress 2025 participant · Ideathon
+              contributor · VTU cultural fest &amp; dance representative</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CONTACT ────────────────────────────────────────── -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">05 / Contact</span>
+        <h2>Let's Work Together</h2>
+        <p class="section-sub">Have a project or an internship opportunity in mind? I'd love to hear about it — let's
+          build something great together.</p>
+      </div>
+      <div class="contact-grid">
+
+        <div class="contact-left">
+          <div class="contact-info-item">
+            <div class="contact-icon">✉️</div>
+            <div>
+              <span class="contact-label">Email</span>
+              <a href="mailto:vaishugckm@gmail.com" id="contact-email">vaishugckm@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-icon">📞</div>
+            <div>
+              <span class="contact-label">Phone</span>
+              <a href="tel:+916360498383" id="contact-phone">+91 6360498383</a>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-icon">📍</div>
+            <div>
+              <span class="contact-label">Location</span>
+              <a id="contact-location">Chikkamagaluru, Karnataka — 577133</a>
+            </div>
+          </div>
+          <div class="social-row">
+            <a href="https://github.com/Vaishnavi-g04" id="footer-github" target="_blank" rel="noopener"
+              class="social-link">GitHub</a>
+            <a href="https://www.linkedin.com/in/vaishnavi-g-776981355/" id="footer-linkedin" target="_blank"
+              rel="noopener" class="social-link">LinkedIn</a>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contact-form" action="#" method="post">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="form-name">Name</label>
+              <input type="text" id="form-name" name="name" placeholder="Your full name" required />
+            </div>
+            <div class="form-group">
+              <label for="form-email">Email</label>
+              <input type="email" id="form-email" name="email" placeholder="your@email.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="form-subject">Subject</label>
+            <input type="text" id="form-subject" name="subject" placeholder="What's this about?" />
+          </div>
+          <div class="form-group">
+            <label for="form-message">Message</label>
+            <textarea id="form-message" name="message" rows="5"
+              placeholder="Tell me about your project or opportunity..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" id="form-submit">Send Message →</button>
+          <p class="form-success hidden" id="form-success">✅ Thanks! I'll get back to you soon.</p>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ─────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span class="footer-logo">VG</span>
+      <p>Designed &amp; Built by <strong>Vaishnavi G</strong> · <span id="footer-year"></span></p>
+      <a href="#home" class="back-to-top" aria-label="Back to top">↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
