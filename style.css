@@ -1655,59 +1655,6 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 
-  /* hero */
-  .hero {
-    padding: 110px 40px 80px;
-    gap: 40px;
-    flex-direction: column-reverse;
-    text-align: center;
-    min-height: unset;
-    padding-bottom: 64px;
-  }
-  .hero-content  { max-width: 100%; }
-  .hero-badge    { margin: 0 auto 24px; }
-  .hero-tagline  { margin: 0 auto 36px; }
-  .hero-cta      { justify-content: center; }
-  .hero-stats    { justify-content: center; }
-  .hero-avatar-wrap { margin: 0 auto; }
-  .avatar-img    { width: 240px; height: 240px; }
-  .scroll-indicator { display: none; }
-
-  /* about */
-  .about-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-  .about-visual {
-    max-width: 400px;
-    margin: 0 auto;
-    width: 100%;
-  }
-
-  /* projects */
-  .project-card.featured {
-    grid-template-columns: 1fr;
-    grid-column: 1 / -1;
-  }
-  .project-card.featured .project-img {
-    height: 240px;
-    min-height: unset;
-  }
-
-  /* contact */
-  .contact-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  /* timeline */
-  .timeline-header {
-    flex-direction: column;
-    gap: 8px;
-  }
-  .timeline-meta { text-align: left; }
-}
-
 /* ── 768px — tablets portrait ───────────────────────── */
 @media (max-width: 768px) {
   /* navbar */
